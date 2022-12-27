@@ -6,23 +6,30 @@ using System.Threading.Tasks;
 
 namespace GenericsDemo
 {
-    public class FindMaximum
+    public class GenericMaximum<T> where T : IComparable
     {
-        public string MaximumString(string firststring,string secondstring, string thirdstring)
+        public T firstvalue, secondvalue, thirdvalue;
+        public GenericMaximum(T firstvalue,T secondvalue, T thirdvalue)
         {
-            if (firststring.CompareTo(secondstring) > 0 && firststring.CompareTo(thirdstring) > 0 ||  firststring.CompareTo(secondstring) >=0 &&  firststring.CompareTo(thirdstring) > 0 || firststring.CompareTo(secondstring) > 0 && firststring.CompareTo(thirdstring) >= 0)
+            this.firstvalue = firstvalue;
+            this.secondvalue = secondvalue;
+            this.thirdvalue = thirdvalue;
+        }
+        public static T Maxvalue(T firstvalue, T secondvalue, T thirdvalue)
+        {
+            if (firstvalue.CompareTo(secondvalue) > 0 && firstvalue.CompareTo(thirdvalue) > 0 ||  firstvalue.CompareTo(secondvalue) >=0 &&  firstvalue.CompareTo(thirdvalue) > 0 || firstvalue.CompareTo(secondvalue) > 0 && firstvalue.CompareTo(thirdvalue) >= 0)
             {
-                return firststring;
+                return firstvalue;
             }
-            if (secondstring.CompareTo(firststring)> 0 && secondstring.CompareTo(thirdstring)> 0  || secondstring.CompareTo(firststring) >=0 && secondstring.CompareTo(thirdstring)>0 || secondstring.CompareTo(firststring) >0 && secondstring.CompareTo(thirdstring) >=0)
+            if (secondvalue.CompareTo(firstvalue)> 0 && secondvalue.CompareTo(thirdvalue)> 0  || secondvalue.CompareTo(firstvalue) >=0 && secondvalue.CompareTo(thirdvalue)>0 || secondvalue.CompareTo(firstvalue) >0 && secondvalue.CompareTo(thirdvalue) >=0)
             {
-                return secondstring;
+                return secondvalue;
             }
-            if (thirdstring.CompareTo(firststring) > 0 && thirdstring.CompareTo(secondstring) > 0 || thirdstring.CompareTo(firststring) >= 0 && thirdstring.CompareTo(secondstring) > 0 || thirdstring.CompareTo(firststring) > 0 && thirdstring.CompareTo(secondstring) >= 0)
+            if (thirdvalue.CompareTo(firstvalue) > 0 && thirdvalue.CompareTo(secondvalue) > 0 || thirdvalue.CompareTo(firstvalue) >= 0 && thirdvalue.CompareTo(secondvalue) > 0 || thirdvalue.CompareTo(firstvalue) > 0 && thirdvalue.CompareTo(secondvalue) >= 0)
             { 
-                return thirdstring;
+                return thirdvalue;
             }
-            return firststring;
+            return firstvalue;
         }
     }
 }
