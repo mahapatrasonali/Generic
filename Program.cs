@@ -47,12 +47,12 @@ namespace GenericsDemo
             //charprintArray.toPrint();
             //Console.ReadKey();
 
-            double firstvalue = 34.3;
-            double secondvalue = 20.5;
+            string firststring = 20;
+            string secondstring = 78;
             
             
             
-            double value = firstvalue.CompareTo(secondvalue);
+            string value = firststring.CompareTo(secondstring);
             
 
              Console.WriteLine(value);
