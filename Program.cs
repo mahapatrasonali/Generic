@@ -31,6 +31,10 @@ namespace GenericsDemo
 
         public static void Main(string[] args)
         {
+            int[] arr = { 112, 322, 456, 987, 654 };
+            Genericmaximum<int> generic = new Genericmaximum<int>(arr);
+            generic.printMaxValue();
+            Console.Read();
           //  int[] intArray = { 1, 2, 3, 4, 5 };
           //  double[] doubleArray = { 1.1, 2.2, 3.3, 4.4 };
           //  char[] charArray = { 'H', 'E', 'A', 'R' };
@@ -47,16 +51,8 @@ namespace GenericsDemo
             //charprintArray.toPrint();
             //Console.ReadKey();
 
-            int firstvalue = 20;
-            int secondvalue = 78;
-            
-            
-            
-            int value = firstvalue.CompareTo(secondvalue);
-            
 
-             Console.WriteLine(value);
-            Console.ReadKey();
+
         }
 
     }
